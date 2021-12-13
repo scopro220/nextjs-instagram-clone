@@ -11,7 +11,7 @@ import { HomeIcon } from "@heroicons/react/solid";
 
 export default function Header() {
   return (
-    <div>
+    <div className="shadow-sm border-b bg-white sticky-top top-0 z-50">
       <div className="flex justify-between bg-white max-w-6xl mx-5 xl:mx-auto">
         {/* Logo Area */}
         <div className="relative w-24 hidden lg:inline-grid cursor-pointer">
@@ -49,7 +49,7 @@ export default function Header() {
           <MenuIcon className="h-6 md:hidden" />
           <div className="relative navBtn">
             <PaperAirplaneIcon className="navBtn" />
-            <div className="absolute -top-2 -right-1 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white font-medium">
+            <div className="absolute -top-2 -right-1 text-xs w-5 h-5 bg-red-400 rounded-full flex items-center justify-center animate-pulse text-white font-medium">
               3
             </div>
           </div>
