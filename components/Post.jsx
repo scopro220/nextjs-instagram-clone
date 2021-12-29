@@ -22,7 +22,6 @@ export default function Post({ id, username, userImg, img, caption }) {
       </div>
       <img src={img} alt={username} className="object-cover w-full" />
 
-      {/* Caption */}
       <div className="flex justify-between">
         <div className="flex space-x-4">
           <HeartIcon className="btn" />
@@ -32,8 +31,23 @@ export default function Post({ id, username, userImg, img, caption }) {
         <BookmarkIcon className="btn" />
       </div>
 
+      <p className="p-5 truncate">
+        <span className="font-bold mr-1">{username} </span>
+        {caption}
+      </p>
+
       {/* Comments */}
       {/* Input Box */}
+
+      <form className="flex items-center p-4">
+        <EmojiHappyIcon className="h-7 mr-3" />
+        <input
+          type="text"
+          placeholder="Add a comment..."
+          className="border-none flex-1 focus:ring-0 outline-none"
+        />
+        <button className="font-semibold text-blue-400">Post</button>
+      </form>
     </div>
   );
 }
