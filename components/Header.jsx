@@ -8,8 +8,13 @@ import {
   MenuIcon,
 } from "@heroicons/react/outline";
 import { HomeIcon } from "@heroicons/react/solid";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Header() {
+  const { data: session } = useSession();
+
+  console.log(session);
+
   return (
     <div className="shadow-sm border-b bg-white sticky-top top-0 z-50">
       <div className="flex justify-between bg-white max-w-6xl mx-5 xl:mx-auto">
@@ -47,20 +52,28 @@ export default function Header() {
         <div className="flex items-center justify-end space-x-4">
           <HomeIcon className="navBtn" />
           <MenuIcon className="h-6 md:hidden" />
-          <div className="relative navBtn">
-            <PaperAirplaneIcon className="navBtn" />
-            <div className="absolute -top-2 -right-1 text-xs w-5 h-5 bg-red-400 rounded-full flex items-center justify-center animate-pulse text-white font-medium">
-              3
-            </div>
-          </div>
-          <PlusCircleIcon className="navBtn" />
-          <UserGroupIcon className="navBtn" />
-          <HeartIcon className="navBtn" />
-          <img
-            src="https://i.imgur.com/bXQ0yOj.jpg"
-            alt="profile"
-            className="rounded-full h-8 w-8 cursor-pointer"
-          />
+
+          {session ? (
+            <>
+              <div className="relative navBtn">
+                <PaperAirplaneIcon className="navBtn" />
+                <div className="absolute -top-2 -right-1 text-xs w-5 h-5 bg-red-400 rounded-full flex items-center justify-center animate-pulse text-white font-medium">
+                  3
+                </div>
+              </div>
+              <PlusCircleIcon className="navBtn" />
+              <UserGroupIcon className="navBtn" />
+              <HeartIcon className="navBtn" />
+              <img
+                src={session.user.image}
+                alt={session.user.name}
+                className="rounded-full h-10 w-10 cursor-pointer"
+                onClick={signOut}
+              />
+            </>
+          ) : (
+            <button onClick={signIn}>Sign In</button>
+          )}
         </div>
       </div>
     </div>
