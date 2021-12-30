@@ -1,20 +1,12 @@
 import { getProviders, signIn } from "next-auth/react";
+import Educational from "../../components/Educational";
 import Header from "../../components/Header";
 
 export default function SignInPage({ providers }) {
   return (
     <>
       <Header />
-      <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-56 px-14 text-center">
-        <img
-          src="https://links.papareact.com/ocw"
-          alt="Instagram"
-          className="w-80"
-        />
-        <p className="font-sm italic">
-          This is not a REAL app, it is a clone and built for EDUCATION PURPOSES
-          ONLY
-        </p>
+      <Educational>
         <div className="mt-40">
           {Object.values(providers).map((provider) => (
             <div key={provider.name}>
@@ -27,7 +19,7 @@ export default function SignInPage({ providers }) {
             </div>
           ))}
         </div>
-      </div>
+      </Educational>
     </>
   );
 }
