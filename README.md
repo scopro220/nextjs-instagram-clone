@@ -1,27 +1,53 @@
-# Next.js + Tailwind CSS Example
+# Instagram Clone with NextJS, Firebase and Recoil
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)
 
-## Preview
+![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+![Firebase](https://img.shields.io/badge/Firebase-ffca28?style=flat&logo=firebase&logoColor=black)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
 
-## Deploy your own
+## Website
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+[Instagram Clone](https://nextjs-instagram-clone-gamma.vercel.app/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+#### Hosted on
 
-## How to use
+[Vercel](https://vercel.com)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Features
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- Authentication (Sign In & Sign Out)
+- Responsive Design
+- Post Pictures and captions
+- Like posts
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## NPM Packages
+
+- [react](https://reactjs.org/)
+- [next](https://nextjs.org/)
+- [next-auth](https://next-auth.js.org/)
+- [tailwind](https://tailwindcss.com/)
+- [recoil](https://recoiljs.org/)
+- [postcss](https://postcss.org/)
+- [heroicons](https://heroicons.com/)
+- [@headlessui](https://headlessui.dev/)
+- [firebase](https://firebase.google.com/)
+- [react-moment](https://www.npmjs.com/package/react-moment)
+- [tailwind-scollbar](https://www.npmjs.com/package/tailwind-scrollbar)
+- [tailwind-scollbar-hide](https://www.npmjs.com/package/tailwind-scrollbar-hide)
+
+## Screenshots
+
+Landing Page
+
+![Landing Page](https://i.imgur.com/v0ptiDw.png)
+
+Logged In Page
+
+![Logged In Page](https://i.imgur.com/NT5babV.png)
+
+Upload Image/Caption
+
+![Upload Image](https://i.imgur.com/eNjUOZU.png)
